@@ -1,0 +1,35 @@
+🚀 What is a VPC?
+A Virtual Private Cloud is your own private network inside the cloud.
+Think of it like creating your own mini–data center in AWS, Azure, or GCP — but virtual.
+
+🧱 Key Components of a VPC
+1. Subnets
+
+Smaller network segments inside the VPC
+Two types:
+
+Public Subnet → Internet-facing (e.g., load balancers, bastion hosts)
+Private Subnet → Internal only (e.g., databases, app servers)
+
+2. Route Tables
+Define how traffic flows in the VPC.
+3. Internet Gateway (IGW)
+Allows resources in public subnets to access the internet.
+4. NAT Gateway
+Allows private subnet instances to access the internet (for updates) without being exposed.
+5. Security Groups
+Firewall rules at the instance level.
+6. Network ACLs
+Firewall rules at the subnet level.
+7. CIDR Block
+The IP address range of your VPC (example: 10.0.0.0/16).
+
+VPC (10.0.0.0/16)
+│
+├── Public Subnet (10.0.1.0/24)
+│     ├── Load Balancer
+│     └── Bastion Host
+│
+└── Private Subnet (10.0.2.0/24)
+      ├── EC2 App Servers
+      └── Databases
